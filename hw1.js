@@ -120,8 +120,7 @@ const Product = class Product {
      * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
      */
     static inStock = (products) => {
-        const inStockProd = products.filter((product) => product.availability === "In Stock");
-        return inStockProd;
+        return products.filter((product) => product.availability === "In Stock");
     }
 
 
@@ -137,7 +136,7 @@ const Product = class Product {
      * Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
      */
     static halfOff = (products) => {
-        const discountedProd = JSON.parse(JSON.stringify(products));  
+        const discountedProd = JSON.parse(JSON.stringify(products));       
         discountedProd.forEach((prod) => (prod.price *= 0.5));
         return discountedProd;
     }
